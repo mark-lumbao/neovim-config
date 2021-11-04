@@ -13,6 +13,6 @@ let g:netrw_liststyle = 3
 
 " Keybinds
 " Open Vertical file browser
-nnoremap <leader>v :Vex<CR>
+" nnoremap <leader>v :Vex<CR> --- moved on to NERDTree at the moment
 " Open Full file browser
-nnoremap <leader>e :Ex<CR>
+" nnoremap <leader>e :Ex<CR>  --- moved on to NERDTree at the momen

@@ -3,6 +3,7 @@ source $HOME/.config/nvim/config/essentials.vim
 source $HOME/.config/nvim/config/bubbles.vim
 source $HOME/.config/nvim/config/nerdcommenter.vim
 source $HOME/.config/nvim/config/netrw.vim
+source $HOME/.config/nvim/config/nerdtree.vim
 source $HOME/.config/nvim/config/trims.vim
 source $HOME/.config/nvim/config/triggercompletion.vim
 source $HOME/.config/nvim/config/gotos.vim
