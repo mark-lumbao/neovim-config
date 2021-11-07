@@ -1,5 +1,7 @@
 syntax enable
 
+set termguicolors
+
 set nocp
 
 filetype plugin on
