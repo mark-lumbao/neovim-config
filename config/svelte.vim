@@ -20,7 +20,7 @@ let g:vim_svelte_plugin_use_sass = 1
 
  let g:ft = ''
 
-" " Settings: NERDCommenter
+" Settings: NERDCommenter
 
 let g:NERDCustomDelimiters = { 'html': { 'left': '<!--', 'right': '-->' } }
 

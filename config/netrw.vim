@@ -10,9 +10,3 @@ let g:netrw_banner = 0
 
 " Set list style to tree
 let g:netrw_liststyle = 3
-
-" Keybinds
-" Open Vertical file browser
-" nnoremap <leader>v :Vex<CR> --- moved on to NERDTree at the moment
-" Open Full file browser
-" nnoremap <leader>e :Ex<CR>  --- moved on to NERDTree at the momen

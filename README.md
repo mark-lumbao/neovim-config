@@ -13,6 +13,8 @@
            |_|
 ```
 
+![preview](./assets/preview.png)
+
 > Mark Anthony Lumbao
 
 ## Plugin Manager: vim-plug

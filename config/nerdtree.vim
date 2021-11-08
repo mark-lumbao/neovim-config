@@ -5,6 +5,3 @@ let NERDTreeWinSize=50
 let NERDTreeShowLineNumbers=1
 " make sure relative line numbers are used
 autocmd FileType nerdtree setlocal relativenumber
-
-" Keybinds
-nnoremap <leader>e :NERDTreeToggle<CR>

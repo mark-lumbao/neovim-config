@@ -37,3 +37,7 @@ call plug#end()
 colorscheme gruvbox
 
 source $HOME/.config/nvim/config/init.vim
+
+" Lua modules
+
+lua require('init')
