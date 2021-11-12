@@ -9,6 +9,7 @@
 
 call plug#begin('~/.vim/plugged')
 
+Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}  " We recommend updating the parsers on update
 Plug 'HerringtonDarkholme/yats.vim'
 Plug 'Shougo/context_filetype.vim'
 Plug 'Xuyuanp/nerdtree-git-plugin'
@@ -18,7 +19,6 @@ Plug 'itchyny/lightline.vim'
 Plug 'junegunn/gv.vim'
 Plug 'kevinoid/vim-jsonc'
 Plug 'leafOfTree/vim-svelte-plugin',
-Plug 'mhinz/vim-grepper'
 Plug 'mhinz/vim-signify'
 Plug 'morhetz/gruvbox'
 Plug 'neoclide/coc.nvim', {'branch': 'release'}

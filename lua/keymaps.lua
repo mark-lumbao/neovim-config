@@ -47,6 +47,7 @@ map('n', '<leader>fg', '<cmd>lua require(\'telescope.builtin\').git_files()<cr>'
 map('n', '<leader>fG', '<cmd>lua require(\'telescope.builtin\').git_branches()<cr>', {})
 map('n', '<leader>fb', '<cmd>lua require(\'telescope.builtin\').buffers()<cr>', {})
 map('n', '<leader>fB', '<cmd>lua require(\'telescope.builtin\').file_browser()<cr>', {})
+map('n', '<leader>lg', '<cmd>lua require(\'telescope.builtin\').live_grep()<cr>', {})
 
 -- Tab Navigation
 map('n', '<M-1>', ':tabn 1 <CR>', { noremap = true, silent = true })
