@@ -41,3 +41,7 @@ source $HOME/.config/nvim/config/init.vim
 " Lua modules
 
 lua require('init')
+
+" This only works here and I don't know why
+" ¯\_(ツ)_/¯
+hi QuickFixLine guibg='#b8bb26' guifg='#282828'

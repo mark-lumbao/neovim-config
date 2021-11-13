@@ -1,4 +1,5 @@
-syntax enable
+syntax on
+
 let mapleader = " "
 
 filetype plugin on

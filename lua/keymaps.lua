@@ -1,33 +1,39 @@
 local map = vim.api.nvim_set_keymap
 
 -- Clear search highlights
-map( 'n', '<Escape>', ':noh <CR>', { noremap =  true, silent = true })
+map('n', '<Escape>', ':noh <CR>', { noremap =  true, silent = true })
+
+-- Open Quickfix List
+map('n', '<leader>co', ':copen <CR>', { noremap =  true, silent = true })
+map('n', '<leader>lo', ':lopen <CR>', { noremap =  true, silent = true })
 
 -- Center cursor on navigation
-map( 'n', 'j', 'jzz', { noremap =  true, silent = true })
-map( 'n', 'k', 'kzz', { noremap =  true, silent = true })
+map('n', 'j', 'jzz', { noremap =  true, silent = true })
+map('n', 'k', 'kzz', { noremap =  true, silent = true })
 
 -- Toggle NerdTree
-map( 'n', '<leader>e', ':NERDTreeToggle <CR>', { noremap =  true, silent = true })
+map('n', '<leader>e', ':NERDTreeToggle <CR>', { noremap =  true, silent = true })
 
 -- Bubble single line
-map( 'n', '<C-Up>', ':m .-2<CR>', { noremap = true, silent = true })
-map( 'n', '<C-Down>', ':m .+1<CR>', { noremap = true, silent = true })
+map('n', '<C-Up>', ':m .-2<CR>', { noremap = true, silent = true })
+map('n', '<C-Down>', ':m .+1<CR>', { noremap = true, silent = true })
 -- Bubble multiple lines
-map( 'v', '<C-Up>', 'xkP`[V`]', { noremap = true, silent = true })
-map( 'v', '<C-Down>', 'xp`[V`]', { noremap = true, silent = true })
+map('v', '<C-Up>', 'xkP`[V`]', { noremap = true, silent = true })
+map('v', '<C-Down>', 'xp`[V`]', { noremap = true, silent = true })
 
 -- Go to definition
-map( 'n', 'gd', '<Plug>(coc-definition)', { silent = true })
-map( 'n', 'gy', '<Plug>(coc-type-definition)', { silent = true })
-map( 'n', 'gi', '<Plug>(coc-implementation)', { silent = true })
-map( 'n', 'gr', '<Plug>(coc-references)', { silent = true })
-
+map('n', 'gd', '<Plug>(coc-definition)', { silent = true })
+map('n', 'gy', '<Plug>(coc-type-definition)', { silent = true })
+map('n', 'gi', '<Plug>(coc-implementation)', { silent = true })
+map('n', 'gr', '<Plug>(coc-references)', { silent = true })
 -- Rename
-map( 'n', '<F2>', '<Plug>(coc-rename)', {})
+map('n', '<F2>', '<Plug>(coc-rename)', {})
 
 -- Git
-map( 'n', 'gs', ':Git status <CR>', {})
+map('n', 'gs', ':Git status <CR>', {})
+map('n', 'GD', ':Git diff <CR>', {})
+map('n', 'gv', ':GV! <CR>', {})
+map('n', 'GV', ':GV <CR>', {})
 
 -- Splits Resize
 map('n', '<leader><right>', ':vertical resize +10 <CR>', { silent = true })
