@@ -30,13 +30,13 @@
 - junegunn/gv.vim
 - kevinoid/vim-jsonc
 - leafOfTree/vim-svelte-plugin
-- mhinz/vim-grepper
 - mhinz/vim-signify
 - morhetz/gruvbox
 - neoclide/coc.nvim
 - neovimhaskell/haskell-vim
 - nvim-lua/plenary.nvim
 - nvim-telescope/telescope.nvim
+- nvim-treesitter/nvim-treesitter
 - preservim/nerdcommenter
 - preservim/nerdtree
 - tpope/vim-fugitive
@@ -48,11 +48,8 @@
 
 - coc-css
 - coc-cssmodules
-- coc-eslint
 - coc-html
 - coc-html-css-support
-- coc-json
-- coc-prettier
 - coc-sh
 - coc-stylelint
 - coc-svelte

@@ -4,8 +4,6 @@ source $HOME/.config/nvim/config/misc.vim
 source $HOME/.config/nvim/config/nerdcommenter.vim
 source $HOME/.config/nvim/config/nerdtree.vim
 source $HOME/.config/nvim/config/netrw.vim
-source $HOME/.config/nvim/config/prettier.vim
 source $HOME/.config/nvim/config/svelte.vim
 source $HOME/.config/nvim/config/triggercompletion.vim
 source $HOME/.config/nvim/config/triggerdoc.vim
-source $HOME/.config/nvim/config/trims.vim
