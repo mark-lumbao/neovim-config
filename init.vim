@@ -7,10 +7,11 @@
 " -                                                                       |___/   -
 " ---------------------------------------------------------------------------------
 
+let g:ale_disable_lsp = 1
+
 call plug#begin('~/.vim/plugged')
 
 Plug 'HerringtonDarkholme/yats.vim'
-Plug 'Shougo/context_filetype.vim'
 Plug 'Xuyuanp/nerdtree-git-plugin'
 Plug 'ap/vim-css-color'
 Plug 'dense-analysis/ale'

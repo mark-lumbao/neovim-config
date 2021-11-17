@@ -17,6 +17,7 @@ map('n', '<leader>e', ':NERDTreeToggle <CR>', { noremap =  true, silent = true }
 -- Bubble single line
 map('n', '<C-Up>', ':m .-2<CR>', { noremap = true, silent = true })
 map('n', '<C-Down>', ':m .+1<CR>', { noremap = true, silent = true })
+
 -- Bubble multiple lines
 map('v', '<C-Up>', 'xkP`[V`]', { noremap = true, silent = true })
 map('v', '<C-Down>', 'xp`[V`]', { noremap = true, silent = true })
@@ -26,20 +27,22 @@ map('n', 'gd', '<Plug>(coc-definition)', { silent = true })
 map('n', 'gy', '<Plug>(coc-type-definition)', { silent = true })
 map('n', 'gi', '<Plug>(coc-implementation)', { silent = true })
 map('n', 'gr', '<Plug>(coc-references)', { silent = true })
+
 -- Rename
 map('n', '<F2>', '<Plug>(coc-rename)', {})
 
 -- Git
-map('n', 'gs', ':Git status <CR>', {})
-map('n', 'GD', ':Git diff <CR>', {})
-map('n', 'gv', ':GV! <CR>', {})
-map('n', 'GV', ':GV <CR>', {})
+map('n', '<leader>gs', ':Git status <CR>', {})
+map('n', '<leader>gd', ':Git diff <CR>', {})
+map('n', '<leader>gv', ':GV! <CR>', {})
+map('n', '<leader>gV', ':GV <CR>', {})
 
 -- Splits Resize
 map('n', '<leader><right>', ':vertical resize +10 <CR>', { silent = true })
 map('n', '<leader><left>', ':vertical resize -10 <CR>', { silent = true })
 map('n', '<leader><up>', ':resize -10 <CR>', { silent = true })
 map('n', '<leader><down>', ':resize +10 <CR>', { silent = true })
+
 -- Splits Navigation
 map('n', '<leader>h', ':wincmd h<CR>', { silent = true })
 map('n', '<leader>l', ':wincmd l<CR>', { silent = true })
@@ -67,3 +70,8 @@ map('n', '<M-8>', ':tabn 8 <CR>', { noremap = true, silent = true })
 map('n', '<M-9>', ':tabn 9 <CR>', { noremap = true, silent = true })
 map('n', '<M-Tab>', ':tabn <CR>', { noremap = true, silent = true })
 map('n', '<S-Tab>', ':tabp <CR>', { noremap = true, silent = true })
+map('n', '<M-t>', ':tabnew <CR>', { noremap = true, silent = true })
+
+-- Terminal Mode
+map('n', '<leader>te', ':te <cr>', { noremap = true })
+map('n', '<leader>tt', ':tabnew | te <cr>', { noremap = true })

@@ -19,16 +19,19 @@ let g:ale_linter_aliases = {
 \   'svelte': ['javascript']
 \}
 let g:ale_linters = {
-\   'svelte': ['eslint'],
-\   'json': ['jsonlint'],
 \   'haskell': ['hlint', 'hfmt'],
+\   'json': ['jsonlint'],
 \   'markdown': ['alex'],
+\   'svelte': ['eslint'],
 \}
 let g:ale_fixers = {
 \   '*': ['remove_trailing_lines', 'trim_whitespace'],
-\   'svelte': ['prettier', 'eslint'],
+\   'css': ['prettier'],
+\   'haskell': ['hfmt'],
 \   'javascript': ['prettier', 'eslint'],
 \   'json': ['fixjson', 'prettier'],
-\   'haskell': ['hfmt'],
 \   'markdown': ['prettier'],
+\   'scss': ['prettier'],
+\   'svelte': ['prettier', 'eslint'],
+\   'typescript': ['prettier', 'eslint'],
 \}
