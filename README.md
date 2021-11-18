@@ -17,18 +17,19 @@
 
 > Mark Anthony Lumbao
 
-## Plugin Manager: vim-plug
+### Plugin Manager: vim-plug
 
 ### Plugins
 
-- Xuyuanp/nerdtree-git-plugin
+- Xsuanp/nerdtree-git-plugin
+- Yggdroot/indentLine
 - dense-analysis/ale
 - itchyny/lightline.vim
 - junegunn/gv.vim
+- leafOfTree/vim-svelte-plugin
 - mhinz/vim-signify
 - morhetz/gruvbox
 - neoclide/coc.nvim
-- neovimhaskell/haskell-vim
 - nvim-lua/plenary.nvim
 - nvim-telescope/telescope.nvim
 - nvim-treesitter/nvim-treesitter
@@ -52,5 +53,3 @@
 - coc-toml
 - coc-tsserver
 - coc-yaml
-
-## Colorscheme gruvbox

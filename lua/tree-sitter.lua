@@ -1,5 +1,24 @@
 require'nvim-treesitter.configs'.setup {
-  ensure_installed = "maintained", -- one of "all", "maintained" (parsers with maintainers), or a list of languages
+  ensure_installed = {
+    "bash",
+    "fish",
+    "svelte",
+    "javascript",
+    "typescript",
+    "haskell",
+    "rust",
+    "html",
+    "css",
+    "scss",
+    "comment",
+    "dockerfile",
+    "json",
+    "lua",
+    "regex",
+    "tsx",
+    "vim",
+    "yaml",
+  },
   highlight = {
     enable = true,              -- false will disable the whole extension
     -- Setting this to true will run `:h syntax` and tree-sitter at the same time.
