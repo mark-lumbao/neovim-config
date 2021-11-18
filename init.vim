@@ -11,14 +11,10 @@ let g:ale_disable_lsp = 1
 
 call plug#begin('~/.vim/plugged')
 
-Plug 'HerringtonDarkholme/yats.vim'
 Plug 'Xuyuanp/nerdtree-git-plugin'
-Plug 'ap/vim-css-color'
 Plug 'dense-analysis/ale'
 Plug 'itchyny/lightline.vim'
 Plug 'junegunn/gv.vim'
-Plug 'kevinoid/vim-jsonc'
-Plug 'leafOfTree/vim-svelte-plugin',
 Plug 'mhinz/vim-signify'
 Plug 'morhetz/gruvbox'
 Plug 'neoclide/coc.nvim', {'branch': 'release'}

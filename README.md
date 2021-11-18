@@ -21,15 +21,10 @@
 
 ### Plugins
 
-- HerringtonDarkholme/yats.vim
-- Shougo/context_filetype.vim
 - Xuyuanp/nerdtree-git-plugin
-- ap/vim-css-color
 - dense-analysis/ale
 - itchyny/lightline.vim
 - junegunn/gv.vim
-- kevinoid/vim-jsonc
-- leafOfTree/vim-svelte-plugin
 - mhinz/vim-signify
 - morhetz/gruvbox
 - neoclide/coc.nvim
