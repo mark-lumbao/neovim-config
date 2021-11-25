@@ -15,7 +15,6 @@ Plug 'Xuyuanp/nerdtree-git-plugin'
 Plug 'Yggdroot/indentLine'
 Plug 'dense-analysis/ale'
 Plug 'junegunn/gv.vim'
-Plug 'leafOfTree/vim-svelte-plugin' " Temporary fallback for treesitter due to https://github.com/nvim-treesitter/nvim-treesitter/issues/1788
 Plug 'mhinz/vim-signify'
 Plug 'morhetz/gruvbox'
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
