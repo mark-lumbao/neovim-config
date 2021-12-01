@@ -25,6 +25,8 @@ let g:ale_linters = {
 \   'markdown': ['alex'],
 \   'svelte': ['eslint'],
 \   'typescript': ['eslint', 'tsserver'],
+\   'typescriptreact': ['eslint', 'tsserver'],
+\   'javascriptreact': ['eslint', 'tsserver'],
 \}
 let g:ale_fixers = {
 \   '*': ['remove_trailing_lines', 'trim_whitespace'],
@@ -36,4 +38,6 @@ let g:ale_fixers = {
 \   'scss': ['prettier'],
 \   'svelte': ['prettier', 'eslint'],
 \   'typescript': ['prettier', 'eslint'],
+\   'typescriptreact': ['prettier', 'eslint'],
+\   'javascriptreact': ['prettier', 'eslint'],
 \}
