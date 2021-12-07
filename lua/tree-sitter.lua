@@ -18,6 +18,7 @@ require'nvim-treesitter.configs'.setup {
     "tsx",
     "vim",
     "yaml",
+    "elm",
   },
   indent = {
     enable = true,

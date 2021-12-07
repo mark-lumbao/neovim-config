@@ -20,6 +20,7 @@ let g:ale_linter_aliases = {
 \}
 let g:ale_linters = {
 \   'haskell': ['hlint', 'hfmt'],
+\   'elm': ['elm_ls', 'make'],
 \   'javascript': ['eslint', 'tsserver'],
 \   'json': ['jsonlint'],
 \   'markdown': ['alex'],
@@ -30,6 +31,7 @@ let g:ale_linters = {
 \}
 let g:ale_fixers = {
 \   '*': ['remove_trailing_lines', 'trim_whitespace'],
+\   'elm': ['elm-format'],
 \   'css': ['prettier'],
 \   'haskell': ['hfmt'],
 \   'javascript': ['prettier', 'eslint'],
