@@ -18,7 +18,6 @@
       "filetypes": ["haskell", "lhaskell"]
     }
   },
-  "codeLens.enable": true,
   "diagnostic.displayByAle": true,
   "svelte.enable-ts-plugin": true
 }
