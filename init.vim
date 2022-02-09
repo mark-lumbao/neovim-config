@@ -11,19 +11,23 @@ let g:ale_disable_lsp = 1
 
 call plug#begin('~/.vim/plugged')
 
+Plug 'L3MON4D3/LuaSnip'
 Plug 'Xuyuanp/nerdtree-git-plugin'
 Plug 'Yggdroot/indentLine'
 Plug 'dense-analysis/ale'
+Plug 'hrsh7th/cmp-nvim-lsp'
+Plug 'hrsh7th/nvim-cmp'
 Plug 'junegunn/gv.vim'
 Plug 'mhinz/vim-signify'
 Plug 'morhetz/gruvbox'
-Plug 'neoclide/coc.nvim', {'branch': 'release'}
+Plug 'neovim/nvim-lspconfig'
 Plug 'nvim-lua/plenary.nvim'
 Plug 'nvim-lualine/lualine.nvim'
 Plug 'nvim-telescope/telescope.nvim'
 Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}
 Plug 'preservim/nerdcommenter'
 Plug 'preservim/nerdtree'
+Plug 'saadparwaiz1/cmp_luasnip'
 Plug 'tpope/vim-fugitive'
 Plug 'tpope/vim-repeat'
 Plug 'tpope/vim-rhubarb'

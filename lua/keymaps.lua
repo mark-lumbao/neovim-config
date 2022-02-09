@@ -14,6 +14,7 @@ map('n', 'k', 'kzz', { noremap =  true, silent = true })
 
 -- Toggle NerdTree
 map('n', '<leader>e', ':NERDTreeToggle <CR>', { noremap =  true, silent = true })
+map('n', '<leader>E', ':NERDTreeFind <CR>', { noremap =  true, silent = true })
 
 -- Bubble single line
 map('n', '<C-Up>', ':m .-2<CR>', { noremap = true, silent = true })
@@ -22,15 +23,6 @@ map('n', '<C-Down>', ':m .+1<CR>', { noremap = true, silent = true })
 -- Bubble multiple lines
 map('v', '<C-Up>', 'xkP`[V`]', { noremap = true, silent = true })
 map('v', '<C-Down>', 'xp`[V`]', { noremap = true, silent = true })
-
--- Go to definition
-map('n', 'gd', '<Plug>(coc-definition)', { silent = true })
-map('n', 'gy', '<Plug>(coc-type-definition)', { silent = true })
-map('n', 'gi', '<Plug>(coc-implementation)', { silent = true })
-map('n', 'gr', '<Plug>(coc-references)', { silent = true })
-
--- Rename
-map('n', '<F2>', '<Plug>(coc-rename)', {})
 
 -- Git
 map('n', '<leader>gs', ':Git status <CR>', {})

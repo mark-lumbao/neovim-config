@@ -19,37 +19,13 @@
 
 ### Plugin Manager: vim-plug
 
-### Plugins
+### Feature List
 
-- Xsuanp/nerdtree-git-plugin
-- Yggdroot/indentLine
-- dense-analysis/ale
-- itchyny/lightline.vim
-- junegunn/gv.vim
-- leafOfTree/vim-svelte-plugin
-- mhinz/vim-signify
-- morhetz/gruvbox
-- neoclide/coc.nvim
-- nvim-lua/plenary.nvim
-- nvim-telescope/telescope.nvim
-- nvim-treesitter/nvim-treesitter
-- preservim/nerdcommenter
-- preservim/nerdtree
-- tpope/vim-fugitive
-- tpope/vim-repeat
-- tpope/vim-rhubarb
-- tpope/vim-surround
-
-### COC Plugins
-
-- coc-css
-- coc-cssmodules
-- coc-html
-- coc-html-css-support
-- coc-sh
-- coc-stylelint
-- coc-svelte
-- coc-tailwindcss
-- coc-toml
-- coc-tsserver
-- coc-yaml
+- Native Neovim LSP with completion and diagnosis
+- ALE for code-formatting and linting
+- NERDTree file explorer
+- Git commands
+- Telescope
+- Gruvbox colorscheme
+- Vim Plug for plugin management
+- Treesitter for syntax highlights and indents
