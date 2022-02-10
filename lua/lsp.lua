@@ -57,6 +57,7 @@ local luasnip = require 'luasnip'
 
 -- nvim-cmp setup
 local cmp = require 'cmp'
+
 cmp.setup {
   snippet = {
     expand = function(args)
@@ -96,5 +97,23 @@ cmp.setup {
   sources = {
     { name = 'nvim_lsp' },
     { name = 'luasnip' },
+    { name = 'path' },
+    { name = 'buffer' },
   },
 }
+
+-- Use buffer source for `/` (if you enabled `native_menu`, this won't work anymore).
+cmp.setup.cmdline('/', {
+  sources = {
+    { name = 'buffer' }
+  }
+})
+
+-- Use cmdline & path source for ':' (if you enabled `native_menu`, this won't work anymore).
+cmp.setup.cmdline(':', {
+  sources = cmp.config.sources({
+    { name = 'path' }
+  }, {
+    { name = 'cmdline' }
+  })
+})

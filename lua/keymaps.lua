@@ -1,20 +1,20 @@
 local map = vim.api.nvim_set_keymap
 
 -- Clear search highlights
-map('n', '<Escape>', ':noh <CR>', { noremap =  true, silent = true })
+map('n', '<Escape>', ':noh<cr>', { noremap =  true, silent = true })
 
 -- Open Quickfix List
-map('n', '<c-q>', ':copen <CR>', { noremap =  true, silent = true })
-map('n', '<c-l>', ':lopen <CR>', { noremap =  true, silent = true })
-map('n', '<leader>cq', ':ClearQuickfixList <CR>', { noremap =  true, silent = true })
+map('n', '<c-q>', ':copen<cr>', { noremap =  true, silent = true })
+map('n', '<c-l>', ':lopen<cr>', { noremap =  true, silent = true })
+map('n', '<leader>cq', ':ClearQuickfixList<cr>', { noremap =  true, silent = true })
 
 -- Center cursor on navigation
 map('n', 'j', 'jzz', { noremap =  true, silent = true })
 map('n', 'k', 'kzz', { noremap =  true, silent = true })
 
 -- Toggle NerdTree
-map('n', '<leader>e', ':NERDTreeToggle <CR>', { noremap =  true, silent = true })
-map('n', '<leader>E', ':NERDTreeFind <CR>', { noremap =  true, silent = true })
+map('n', '<leader>e', ':NERDTreeToggle<cr>', { noremap =  true, silent = true })
+map('n', '<leader>E', ':NERDTreeFind<cr>', { noremap =  true, silent = true })
 
 -- Bubble single line
 map('n', '<C-Up>', ':m .-2<CR>', { noremap = true, silent = true })
@@ -25,16 +25,16 @@ map('v', '<C-Up>', 'xkP`[V`]', { noremap = true, silent = true })
 map('v', '<C-Down>', 'xp`[V`]', { noremap = true, silent = true })
 
 -- Git
-map('n', '<leader>gs', ':Git status <CR>', {})
-map('n', '<leader>gd', ':Git diff <CR>', {})
-map('n', '<leader>gv', ':GV! <CR>', {})
-map('n', '<leader>gV', ':GV <CR>', {})
+map('n', '<leader>gs', ':Git status<cr>', {})
+map('n', '<leader>gd', ':Git diff<cr>', {})
+map('n', '<leader>gv', ':GV!<cr>', {})
+map('n', '<leader>gV', ':GV<cr>', {})
 
 -- Splits Resize
-map('n', '<leader><right>', ':vertical resize +10 <CR>', { silent = true })
-map('n', '<leader><left>', ':vertical resize -10 <CR>', { silent = true })
-map('n', '<leader><up>', ':resize -10 <CR>', { silent = true })
-map('n', '<leader><down>', ':resize +10 <CR>', { silent = true })
+map('n', '<leader><right>', ':vertical resize +10<cr>', { silent = true })
+map('n', '<leader><left>', ':vertical resize -10<cr>', { silent = true })
+map('n', '<leader><up>', ':resize -10<cr>', { silent = true })
+map('n', '<leader><down>', ':resize +10<cr>', { silent = true })
 
 -- Splits Navigation
 map('n', '<leader>h', ':wincmd h<CR>', { silent = true })
@@ -51,19 +51,24 @@ map('n', '<leader>fb', '<cmd>lua require(\'telescope.builtin\').buffers()<cr>', 
 map('n', '<leader>fB', '<cmd>lua require(\'telescope.builtin\').file_browser()<cr>', {})
 map('n', '<leader>rg', '<cmd>lua require(\'telescope.builtin\').live_grep()<cr>', {})
 
--- Tab Navigation
-map('n', '<M-1>', ':tabn 1 <CR>', { noremap = true, silent = true })
-map('n', '<M-2>', ':tabn 2 <CR>', { noremap = true, silent = true })
-map('n', '<M-3>', ':tabn 3 <CR>', { noremap = true, silent = true })
-map('n', '<M-4>', ':tabn 4 <CR>', { noremap = true, silent = true })
-map('n', '<M-5>', ':tabn 5 <CR>', { noremap = true, silent = true })
-map('n', '<M-6>', ':tabn 6 <CR>', { noremap = true, silent = true })
-map('n', '<M-7>', ':tabn 7 <CR>', { noremap = true, silent = true })
-map('n', '<M-8>', ':tabn 8 <CR>', { noremap = true, silent = true })
-map('n', '<M-9>', ':tabn 9 <CR>', { noremap = true, silent = true })
-map('n', '<M-Tab>', ':tabn <CR>', { noremap = true, silent = true })
-map('n', '<S-Tab>', ':tabp <CR>', { noremap = true, silent = true })
-map('n', '<M-t>', ':tabnew <CR>', { noremap = true, silent = true })
+-- Tabline/Tabs/Buffers
+map('n', 't1', ':tabn 1<cr>', { noremap = true, silent = true })
+map('n', 't2', ':tabn 2<cr>', { noremap = true, silent = true })
+map('n', 't3', ':tabn 3<cr>', { noremap = true, silent = true })
+map('n', 't4', ':tabn 4<cr>', { noremap = true, silent = true })
+map('n', 't5', ':tabn 5<cr>', { noremap = true, silent = true })
+map('n', 't6', ':tabn 6<cr>', { noremap = true, silent = true })
+map('n', 't7', ':tabn 7<cr>', { noremap = true, silent = true })
+map('n', 't8', ':tabn 8<cr>', { noremap = true, silent = true })
+map('n', 't9', ':tabn 9<cr>', { noremap = true, silent = true })
+map('n', 'tt', ':TablineTabNew<cr>', { noremap = true, silent = true })
+map('n', 'te', ':TablineTabNew ', { noremap = true })
+map('n', 'tl', ':tabn<cr>', { noremap = true, silent = true })
+map('n', 'th', ':tabp<cr>', { noremap = true, silent = true })
+map('n', 'tc', ':tabc<cr>', { noremap = true, silent = true })
+map('n', 'bh', ':TablineBufferPrevious<cr>', { noremap = true, silent = true })
+map('n', 'bl', ':TablineBufferNext<cr>', { noremap = true, silent = true })
+map('n', 'bc', ':bwipeout<cr>', { noremap = true, silent = true })
 
 -- Terminal Mode
 map('n', '<leader>te', ':te <cr>', { noremap = true })

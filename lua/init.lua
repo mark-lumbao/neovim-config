@@ -1,4 +1,5 @@
 require('keymaps')
-require('tree-sitter')
 require('lline')
 require('lsp')
+require('tline')
+require('tree-sitter')
