@@ -7,8 +7,6 @@
 " -                                                                       |___/   -
 " ---------------------------------------------------------------------------------
 
-let g:ale_disable_lsp = 1
-
 call plug#begin('~/.vim/plugged')
 
 Plug 'L3MON4D3/LuaSnip'

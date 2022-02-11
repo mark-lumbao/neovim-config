@@ -1,5 +1,3 @@
--- init.lua
-
 -- following options are the default
 -- each of these are documented in `:help nvim-tree.OPTION_NAME`
 require'nvim-tree'.setup {
@@ -44,8 +42,8 @@ require'nvim-tree'.setup {
     timeout = 500,
   },
   view = {
-    width = 30,
-    height = 30,
+    width = 50,
+    height = 50,
     hide_root_folder = false,
     side = 'left',
     auto_resize = false,
@@ -66,7 +64,7 @@ require'nvim-tree'.setup {
       global = false,
     },
     open_file = {
-      quit_on_open = false,
+      quit_on_open = true,
     }
   }
 }
