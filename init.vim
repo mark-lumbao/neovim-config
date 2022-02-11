@@ -29,8 +29,9 @@ Plug 'nvim-lua/plenary.nvim'
 Plug 'nvim-lualine/lualine.nvim'
 Plug 'nvim-telescope/telescope.nvim'
 Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}
+Plug 'kyazdani42/nvim-web-devicons' " for file icons
+Plug 'kyazdani42/nvim-tree.lua'
 Plug 'preservim/nerdcommenter'
-Plug 'preservim/nerdtree'
 Plug 'saadparwaiz1/cmp_luasnip'
 Plug 'tpope/vim-fugitive'
 Plug 'tpope/vim-repeat'

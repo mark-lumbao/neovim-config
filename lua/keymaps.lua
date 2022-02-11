@@ -13,8 +13,8 @@ map('n', 'j', 'jzz', { noremap =  true, silent = true })
 map('n', 'k', 'kzz', { noremap =  true, silent = true })
 
 -- Toggle NerdTree
-map('n', '<leader>e', ':NERDTreeToggle<cr>', { noremap =  true, silent = true })
-map('n', '<leader>E', ':NERDTreeFind<cr>', { noremap =  true, silent = true })
+map('n', '<leader>e', ':NvimTreeToggle<cr>', { noremap =  true, silent = true })
+map('n', '<leader>E', ':NvimTreeFindFile<cr>', { noremap =  true, silent = true })
 
 -- Bubble single line
 map('n', '<C-Up>', ':m .-2<CR>', { noremap = true, silent = true })
