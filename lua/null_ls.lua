@@ -3,18 +3,20 @@ local null_ls = require("null-ls")
 local formatting = null_ls.builtins.formatting
 local diagnostics = null_ls.builtins.diagnostics
 
-local extra_eslint_files =
+local js_file_aliases =
   { "svelte"
   }
 
 -- register any number of sources simultaneously
 local sources =
-  { formatting.eslint_d.with({ extra_filetypes = extra_eslint_files })
-  , formatting.prettier
-  , formatting.elm_format
-  , formatting.brittany
+  { diagnostics.eslint_d.with({ extra_filetypes = js_file_aliases })
   , diagnostics.jsonlint
-  , diagnostics.eslint_d.with({ extra_filetypes = extra_eslint_files })
+  , formatting.brittany
+  , formatting.elm_format
+  , formatting.prettier.with({ extra_filetypes = js_file_aliases })
+  , formatting.trim_newlines
+  , formatting.trim_whitespace
+  , formatting.eslint_d.with({ extra_filetypes = js_file_aliases })
   }
 
 local on_attach = function(client)

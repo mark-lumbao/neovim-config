@@ -6,7 +6,7 @@ map('n', '<Escape>', ':noh<cr>', { noremap =  true, silent = true })
 -- Open Quickfix List
 map('n', '<c-q>', ':copen<cr>', { noremap =  true, silent = true })
 map('n', '<c-l>', ':lopen<cr>', { noremap =  true, silent = true })
-map('n', '<leader>cq', ':ClearQuickfixList<cr>', { noremap =  true, silent = true })
+map('n', '<leader>cq', ':call setqflist([])<cr>', { noremap =  true, silent = true })
 
 -- Center cursor on navigation
 map('n', 'j', 'jzz', { noremap =  true, silent = true })
