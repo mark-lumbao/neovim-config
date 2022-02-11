@@ -22,10 +22,9 @@
 ### Feature List
 
 - Native Neovim LSP with completion and diagnosis
-- ALE for code-formatting and linting
+- null-ls for code-formatting and linting
 - NERDTree file explorer
 - Git commands
 - Telescope
 - Gruvbox colorscheme
-- Vim Plug for plugin management
 - Treesitter for syntax highlights and indents
