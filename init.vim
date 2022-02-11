@@ -12,7 +12,6 @@ let g:ale_disable_lsp = 1
 call plug#begin('~/.vim/plugged')
 
 Plug 'L3MON4D3/LuaSnip'
-Plug 'Xuyuanp/nerdtree-git-plugin'
 Plug 'Yggdroot/indentLine'
 Plug 'dense-analysis/ale'
 Plug 'hrsh7th/cmp-buffer'
@@ -22,6 +21,8 @@ Plug 'hrsh7th/cmp-path'
 Plug 'hrsh7th/nvim-cmp'
 Plug 'junegunn/gv.vim'
 Plug 'kdheepak/tabline.nvim'
+Plug 'kyazdani42/nvim-tree.lua'
+Plug 'kyazdani42/nvim-web-devicons' " for file icons
 Plug 'mhinz/vim-signify'
 Plug 'morhetz/gruvbox'
 Plug 'neovim/nvim-lspconfig'
@@ -29,8 +30,6 @@ Plug 'nvim-lua/plenary.nvim'
 Plug 'nvim-lualine/lualine.nvim'
 Plug 'nvim-telescope/telescope.nvim'
 Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}
-Plug 'kyazdani42/nvim-web-devicons' " for file icons
-Plug 'kyazdani42/nvim-tree.lua'
 Plug 'preservim/nerdcommenter'
 Plug 'saadparwaiz1/cmp_luasnip'
 Plug 'tpope/vim-fugitive'
