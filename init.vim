@@ -40,4 +40,6 @@ call plug#end()
 
 colorscheme gruvbox
 
+set undodir=$HOME/.vim/undodir
+
 lua require('init')

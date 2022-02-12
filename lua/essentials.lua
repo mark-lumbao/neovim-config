@@ -26,5 +26,4 @@ set.swapfile      = false
 set.tabstop       = 2
 set.termguicolors = true
 set.undofile      = true
-set.undodir       = ".undodir"
 set.wrap          = false
