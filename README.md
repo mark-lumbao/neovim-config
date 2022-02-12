@@ -23,7 +23,7 @@
 
 - Native Neovim LSP with completion and diagnosis
 - null-ls for code-formatting and linting
-- NERDTree file explorer
+- nvim-tree file explorer
 - Git commands
 - Telescope
 - Gruvbox colorscheme
