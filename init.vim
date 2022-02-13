@@ -10,8 +10,8 @@
 call plug#begin('~/.vim/plugged')
 
 Plug 'L3MON4D3/LuaSnip'
-Plug 'goolord/alpha-nvim'
 Plug 'Yggdroot/indentLine'
+Plug 'goolord/alpha-nvim'
 Plug 'hrsh7th/cmp-buffer'
 Plug 'hrsh7th/cmp-cmdline'
 Plug 'hrsh7th/cmp-nvim-lsp'
@@ -25,11 +25,11 @@ Plug 'kyazdani42/nvim-web-devicons'
 Plug 'mhinz/vim-signify'
 Plug 'morhetz/gruvbox'
 Plug 'neovim/nvim-lspconfig'
+Plug 'numToStr/Comment.nvim'
 Plug 'nvim-lua/plenary.nvim'
 Plug 'nvim-lualine/lualine.nvim'
 Plug 'nvim-telescope/telescope.nvim'
 Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}
-Plug 'preservim/nerdcommenter'
 Plug 'saadparwaiz1/cmp_luasnip'
 Plug 'tpope/vim-fugitive'
 Plug 'tpope/vim-repeat'
