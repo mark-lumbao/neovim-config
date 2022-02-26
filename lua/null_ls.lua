@@ -9,14 +9,16 @@ local js_file_aliases =
 
 -- register any number of sources simultaneously
 local sources =
-  { diagnostics.eslint_d.with({ extra_filetypes = js_file_aliases })
+  { diagnostics.actionlint
   , diagnostics.jsonlint
+  , diagnostics.yamllint
+  , diagnostics.eslint_d.with({ extra_filetypes = js_file_aliases })
   , formatting.brittany
   , formatting.elm_format
+  , formatting.eslint_d.with({ extra_filetypes = js_file_aliases })
   , formatting.prettier.with({ extra_filetypes = js_file_aliases })
   , formatting.trim_newlines
   , formatting.trim_whitespace
-  , formatting.eslint_d.with({ extra_filetypes = js_file_aliases })
   }
 
 local on_attach = function(client)
