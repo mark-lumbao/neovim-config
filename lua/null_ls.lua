@@ -8,11 +8,28 @@ local js_file_aliases = { "svelte" }
 
 -- register any number of sources simultaneously
 local sources = {
-	diagnostics.actionlint,
+	diagnostics.actionlint.with({
+		condition = function(utils)
+			return utils.root_has_file({ ".github/actionlint.yaml" })
+		end,
+	}),
 	diagnostics.luacheck,
 	diagnostics.jsonlint,
 	diagnostics.yamllint,
-	diagnostics.eslint_d.with({ extra_filetypes = js_file_aliases }),
+	diagnostics.eslint_d.with({
+		extra_filetypes = js_file_aliases,
+		condition = function(utils)
+			return utils.root_has_file({
+				".eslintrc",
+				".eslintrc.js",
+				".eslintrc.cjs",
+				".eslintrc.yaml",
+				".eslintrc.yml",
+				".eslintrc.json",
+				"package.json",
+			})
+		end,
+	}),
 	formatting.brittany,
 	formatting.elm_format,
 	formatting.eslint_d.with({ extra_filetypes = js_file_aliases }),
