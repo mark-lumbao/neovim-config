@@ -16,7 +16,7 @@ local sources = {
 	diagnostics.luacheck,
 	diagnostics.jsonlint,
 	diagnostics.yamllint,
-	diagnostics.eslint_d.with({
+	diagnostics.eslint.with({
 		extra_filetypes = js_file_aliases,
 		condition = function(utils)
 			return utils.root_has_file({
@@ -32,7 +32,7 @@ local sources = {
 	}),
 	formatting.brittany,
 	formatting.elm_format,
-	formatting.eslint_d.with({ extra_filetypes = js_file_aliases }),
+	formatting.eslint.with({ extra_filetypes = js_file_aliases }),
 	formatting.prettier.with({ extra_filetypes = js_file_aliases }),
 	formatting.trim_newlines,
 	formatting.trim_whitespace,
