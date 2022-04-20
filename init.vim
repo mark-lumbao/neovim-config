@@ -11,6 +11,7 @@ call plug#begin('~/.vim/plugged')
 
 Plug 'L3MON4D3/LuaSnip'
 Plug 'Yggdroot/indentLine'
+Plug 'ellisonleao/gruvbox.nvim'
 Plug 'goolord/alpha-nvim'
 Plug 'hrsh7th/cmp-buffer'
 Plug 'hrsh7th/cmp-cmdline'
@@ -22,7 +23,6 @@ Plug 'junegunn/gv.vim'
 Plug 'kyazdani42/nvim-tree.lua'
 Plug 'kyazdani42/nvim-web-devicons'
 Plug 'lewis6991/gitsigns.nvim'
-Plug 'morhetz/gruvbox'
 Plug 'neovim/nvim-lspconfig'
 Plug 'numToStr/Comment.nvim'
 Plug 'nvim-lua/plenary.nvim'
@@ -36,14 +36,5 @@ Plug 'tpope/vim-rhubarb'
 Plug 'tpope/vim-surround'
 
 call plug#end()
-
-colorscheme gruvbox
-
-let g:nvim_tree_show_icons = {
-    \ 'git': 1,
-    \ 'folders': 1,
-    \ 'files': 1,
-    \ 'folder_arrows': 0,
-    \ }
 
 lua require('init')
