@@ -17,7 +17,7 @@
 
 > Mark Anthony Lumbao
 
-### Plugin Manager: vim-plug
+### Plugin Manager: packer
 
 ### Feature List
 
