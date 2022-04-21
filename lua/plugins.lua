@@ -1,6 +1,6 @@
 vim.cmd([[packadd packer.nvim]])
 
-return require("packer").startup(function()
+return require("packer").startup(function(use)
 	use("wbthomason/packer.nvim")
 	use("L3MON4D3/LuaSnip")
 	use("Yggdroot/indentLine")
