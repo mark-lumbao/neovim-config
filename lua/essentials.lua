@@ -31,5 +31,6 @@ set.softtabstop = 2
 set.swapfile = false
 set.tabstop = 2
 set.termguicolors = true
+set.autoindent = true
 set.undofile = true
 set.wrap = false
