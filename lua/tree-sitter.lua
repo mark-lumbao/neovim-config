@@ -5,6 +5,7 @@ require("nvim-treesitter.configs").setup({
 		"svelte",
 		"javascript",
 		"typescript",
+		"python",
 		"haskell",
 		"rust",
 		"html",

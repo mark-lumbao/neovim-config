@@ -13,6 +13,7 @@ local sources = {
 			return utils.root_has_file({ ".github/actionlint.yaml" })
 		end,
 	}),
+	diagnostics.flake8,
 	diagnostics.luacheck,
 	diagnostics.jsonlint,
 	diagnostics.yamllint,
@@ -31,6 +32,7 @@ local sources = {
 		end,
 	}),
 	formatting.brittany,
+	formatting.black,
 	formatting.elm_format,
 	formatting.eslint.with({ extra_filetypes = js_file_aliases }),
 	formatting.prettier.with({ extra_filetypes = js_file_aliases }),
