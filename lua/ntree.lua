@@ -1,6 +1,16 @@
 -- following options are the default
 -- each of these are documented in `:help nvim-tree.OPTION_NAME`
 require("nvim-tree").setup({
+	renderer = {
+		icons = {
+			show = {
+				git = true,
+				folder = true,
+				file = true,
+				folder_arrow = false,
+			},
+		},
+	},
 	disable_netrw = true,
 	hijack_netrw = true,
 	open_on_setup = true,
