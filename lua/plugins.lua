@@ -1,7 +1,6 @@
 vim.cmd([[packadd packer.nvim]])
 
 return require("packer").startup(function(use)
-	use("wbthomason/packer.nvim")
 	use("L3MON4D3/LuaSnip")
 	use("Yggdroot/indentLine")
 	use("ellisonleao/gruvbox.nvim")
@@ -21,13 +20,11 @@ return require("packer").startup(function(use)
 	use("nvim-lua/plenary.nvim")
 	use("nvim-lualine/lualine.nvim")
 	use("nvim-telescope/telescope.nvim")
-	use({
-		"nvim-treesitter/nvim-treesitter",
-		run = ":TSUpdate",
-	})
 	use("saadparwaiz1/cmp_luasnip")
 	use("tpope/vim-fugitive")
 	use("tpope/vim-repeat")
 	use("tpope/vim-rhubarb")
 	use("tpope/vim-surround")
+	use("wbthomason/packer.nvim")
+	use({ "nvim-treesitter/nvim-treesitter", run = ":TSUpdate" })
 end)
