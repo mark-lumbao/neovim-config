@@ -60,4 +60,17 @@ local on_attach = function(client, bufnr)
 	end
 end
 
+--[[
+- Reference https://github.com/jose-elias-alvarez/null-ls.nvim/issues/428
+- Suppress warning regarding client offset due to ccls installation
+--]]
+local notify = vim.notify
+vim.notify = function(msg, ...)
+	if msg:match("warning: multiple different client offset_encodings") then
+		return
+	end
+
+	notify(msg, ...)
+end
+
 null_ls.setup({ sources = sources, on_attach = on_attach })
