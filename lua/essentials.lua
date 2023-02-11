@@ -2,10 +2,16 @@ local set = vim.o
 local let = vim.g
 local cmd = vim.cmd
 
+--[[
+-- Autofix with Eslint using nvm-lsp is faster
+-- rather than using NullLs
+-- https://github.com/neovim/nvim-lspconfig/blob/master/doc/server_configurations.md#eslint
+]]
 cmd([[
   syntax on
   colorscheme gruvbox
   filetype plugin indent on
+  autocmd BufWritePre *.tsx,*.ts,*.jsx,*.js EslintFixAll
 ]])
 
 let.mapleader = " "

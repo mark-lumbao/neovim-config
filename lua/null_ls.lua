@@ -34,7 +34,6 @@ local sources = {
 	formatting.brittany,
 	formatting.black,
 	formatting.elm_format,
-	formatting.eslint.with({ extra_filetypes = js_file_aliases }),
 	formatting.prettier.with({ extra_filetypes = js_file_aliases }),
 	formatting.trim_newlines,
 	formatting.trim_whitespace,
