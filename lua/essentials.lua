@@ -1,3 +1,5 @@
+local vim = vim or {}
+
 local set = vim.o
 local let = vim.g
 local cmd = vim.cmd

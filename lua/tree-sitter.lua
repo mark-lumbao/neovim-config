@@ -1,3 +1,5 @@
+local vim = vim or {}
+
 require("nvim-treesitter.configs").setup({
 	ensure_installed = {
 		"bash",
@@ -38,7 +40,6 @@ require("nvim-treesitter.configs").setup({
 
 -- Folding setup
 
-local vim = vim
 local api = vim.api
 local M = {}
 

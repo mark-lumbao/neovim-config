@@ -1,3 +1,5 @@
+local vim = vim or {}
+
 -- Mappings.
 -- See `:help vim.diagnostic.*` for documentation on any of the below functions
 local opts = { noremap = true, silent = true }
@@ -63,6 +65,11 @@ local servers = {
 	"tsserver",
 }
 
+-- IMPORTANT: make sure to setup neodev BEFORE lspconfig
+require("neodev").setup({
+	-- add any options here, or leave empty to use the default settings
+})
+
 for _, lsp in pairs(servers) do
 	require("lspconfig")[lsp].setup({
 		on_attach = on_attach,
@@ -70,6 +77,22 @@ for _, lsp in pairs(servers) do
 		flags = {
 			-- This will be the default in neovim 0.7+
 			debounce_text_changes = 150,
+		},
+		settings = {
+			Lua = {
+				workspace = {
+					library = {
+						["/usr/share/awesome/lib"] = true,
+					},
+				},
+				completion = {
+					callSnippet = "Replace",
+				},
+				diagnostics = {
+					enabled = true,
+					globals = { "vim", "awesome" },
+				},
+			},
 		},
 	})
 end
@@ -87,8 +110,8 @@ cmp.setup({
 		end,
 	},
 	mapping = cmp.mapping.preset.insert({
-		["<C-p>"] = cmp.mapping(cmp.mapping.select_prev_item(), {"i", "c"}),
-		["<C-n>"] = cmp.mapping(cmp.mapping.select_next_item(), {"i", "c"}),
+		["<C-p>"] = cmp.mapping(cmp.mapping.select_prev_item(), { "i", "c" }),
+		["<C-n>"] = cmp.mapping(cmp.mapping.select_next_item(), { "i", "c" }),
 		["<C-d>"] = cmp.mapping.scroll_docs(-4),
 		["<C-f>"] = cmp.mapping.scroll_docs(4),
 		["<C-Space>"] = cmp.mapping.complete(),

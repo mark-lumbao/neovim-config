@@ -1,4 +1,4 @@
-local vim = vim
+local vim = vim or {}
 
 local function open_nvim_tree(data)
 	-- buffer is a directory

@@ -1,3 +1,5 @@
+local vim = vim or {}
+
 local map = vim.api.nvim_set_keymap
 
 -- Clear search highlights

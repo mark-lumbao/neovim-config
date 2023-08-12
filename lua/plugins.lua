@@ -1,6 +1,9 @@
+local vim = vim or {}
+
 vim.cmd([[packadd packer.nvim]])
 
 return require("packer").startup(function(use)
+	use("folke/neodev.nvim")
 	use("L3MON4D3/LuaSnip")
 	use("Yggdroot/indentLine")
 	use("ellisonleao/gruvbox.nvim")
