@@ -1,6 +1,8 @@
-local vim = vim or {}
+-- TODO: Convert all string :call to lua function calls
 
-local map = vim.api.nvim_set_keymap
+local vim = vim or {}
+local map = vim.keymap.set
+local telescope = require("telescope.builtin")
 
 -- Clear search highlights
 map("n", "<Escape>", ":noh<cr>", { noremap = true, silent = true })
@@ -8,7 +10,9 @@ map("n", "<Escape>", ":noh<cr>", { noremap = true, silent = true })
 -- Open Quickfix List
 map("n", "<c-q>", ":copen<cr>", { noremap = true, silent = true })
 map("n", "<c-l>", ":lopen<cr>", { noremap = true, silent = true })
-map("n", "<leader>cq", ":call setqflist([])<cr>", { noremap = true, silent = true })
+map("n", "<leader>cq", function()
+	vim.fn.setqflist({})
+end, { noremap = true, silent = true })
 
 -- Center cursor on navigation
 map("n", "j", "jzz", { noremap = true, silent = true })
@@ -46,12 +50,24 @@ map("n", "<leader>j", ":wincmd j<CR>", { silent = true })
 map("n", "<leader><leader>", ":wincmd c<CR>", { silent = true })
 
 -- Telescope Remaps
-map("n", "<leader>ff", "<cmd>lua require('telescope.builtin').find_files()<cr>", {})
-map("n", "<leader>fg", "<cmd>lua require('telescope.builtin').git_files()<cr>", {})
-map("n", "<leader>fG", "<cmd>lua require('telescope.builtin').git_branches()<cr>", {})
-map("n", "<leader>fb", "<cmd>lua require('telescope.builtin').buffers()<cr>", {})
-map("n", "<leader>fB", "<cmd>lua require('telescope.builtin').file_browser()<cr>", {})
-map("n", "<leader>rg", "<cmd>lua require('telescope.builtin').live_grep()<cr>", {})
+map("n", "<leader>ff", function()
+	telescope.find_files()
+end, {})
+map("n", "<leader>fg", function()
+	telescope.git_files()
+end, {})
+map("n", "<leader>fG", function()
+	telescope.git_branches()
+end, {})
+map("n", "<leader>fb", function()
+	telescope.buffers()
+end, {})
+map("n", "<leader>fk", function()
+	telescope.keymaps()
+end, {})
+map("n", "<leader>rg", function()
+	telescope.live_grep()
+end, {})
 
 -- Tabline/Tabs/Buffers
 map("n", "t1", ":tabn 1<cr>", { noremap = true, silent = true })
