@@ -1,20 +1,38 @@
 local vim = vim or {}
 
 local set = vim.o
+local setl = vim.opt_local
 local let = vim.g
 local cmd = vim.cmd
 
---[[
--- Autofix with Eslint using nvm-lsp is faster
--- rather than using NullLs
--- https://github.com/neovim/nvim-lspconfig/blob/master/doc/server_configurations.md#eslint
-]]
 cmd([[
   syntax on
   colorscheme gruvbox
   filetype plugin indent on
-  autocmd BufWritePre *.tsx,*.ts,*.jsx,*.js EslintFixAll
 ]])
+
+--[[
+ Autofix with Eslint using nvm-lsp is faster
+ rather than using NullLs
+ https://github.com/neovim/nvim-lspconfig/blob/master/doc/server_configurations.md#eslint
+ Below replaces autocmd BufWritePre *.tsx,*.ts,*.jsx,*.js EslintFixAll
+]]
+vim.api.nvim_create_autocmd({ "BufWritePre" }, {
+	pattern = { "*.tsx", "*.ts", "*.jsx", "*.js" },
+	callback = function()
+		vim.cmd("EslintFixAll")
+	end,
+})
+
+-- bypass default settings for markdowns only for the current buffer
+vim.api.nvim_create_autocmd({ "BufEnter" }, {
+	pattern = { "*.md" },
+	callback = function()
+		setl.sw = 2
+		setl.ts = 2
+		setl.sts = 2
+	end,
+})
 
 let.mapleader = " "
 set.backup = false
