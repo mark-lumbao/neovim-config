@@ -36,7 +36,20 @@ local sources = {
 	formatting.brittany,
 	formatting.black,
 	formatting.elm_format,
-	formatting.prettier.with({ extra_filetypes = js_file_aliases }),
+	formatting.prettier.with({
+		prefer_local = "node_modules/.bin",
+		extra_filetypes = js_file_aliases,
+		condition = function(utils)
+			return utils.root_has_file({
+				"prettier.config.js",
+				".prettierrc.js",
+				".prettierrc.json",
+				".prettierrc.yml",
+				".prettierrc.yaml",
+				".prettierrc.toml",
+			})
+		end,
+	}),
 	formatting.trim_newlines,
 	formatting.trim_whitespace,
 	formatting.stylua,
