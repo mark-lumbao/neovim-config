@@ -53,15 +53,12 @@ local servers = {
 	"cssls",
 	"elmls",
 	"eslint",
-	"hls",
 	"html",
 	"jdtls",
 	"jsonls",
 	"lua_ls",
 	"pyright",
 	"rust_analyzer",
-	"svelte",
-	"tailwindcss",
 	"tsserver",
 }
 
