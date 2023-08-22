@@ -33,19 +33,7 @@ local sources = {
 	formatting.brittany,
 	formatting.black,
 	formatting.elm_format,
-	formatting.prettier.with({
-		prefer_local = "node_modules/.bin",
-		condition = function(utils)
-			return utils.root_has_file({
-				"prettier.config.js",
-				".prettierrc.js",
-				".prettierrc.json",
-				".prettierrc.yml",
-				".prettierrc.yaml",
-				".prettierrc.toml",
-			})
-		end,
-	}),
+	formatting.prettier.with({}),
 	formatting.trim_newlines,
 	formatting.trim_whitespace,
 	formatting.stylua,
@@ -56,6 +44,7 @@ local sources = {
 -- Reference <https://github.com/jose-elias-alvarez/null-ls.nvim/wiki/Formatting-on-save>
 local augroup = vim.api.nvim_create_augroup("LspFormatting", {})
 -- you can reuse a shared lspconfig on_attach callback here
+vim.fn.setenv("AUTO_FMT", 1)
 local on_attach = function(client, bufnr)
 	if client.supports_method("textDocument/formatting") then
 		vim.api.nvim_clear_autocmds({ group = augroup, buffer = bufnr })
@@ -64,7 +53,10 @@ local on_attach = function(client, bufnr)
 			buffer = bufnr,
 			callback = function()
 				-- on 0.8, you should use vim.lsp.buf.format({ bufnr = bufnr }) instead
-				vim.lsp.buf.format({ timeout_ms = 3000 })
+				local AUTO_FMT = tonumber(vim.fn.getenv("AUTO_FMT"))
+				if AUTO_FMT == 1 then
+					vim.lsp.buf.format({ timeout_ms = 3000 })
+				end
 			end,
 		})
 	end

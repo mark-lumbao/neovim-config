@@ -1,3 +1,15 @@
+-- autofm()
+-- indicates whether environment variable AUTO_FMT
+-- is on or off
+local function autofm()
+	local aft = tonumber(vim.fn.getenv("AUTO_FMT"))
+	if aft == 1 then
+		return "󰃢"
+	else
+		return "󰃢!"
+	end
+end
+
 require("lualine").setup({
 	options = {
 		icons_enabled = true,
@@ -12,7 +24,7 @@ require("lualine").setup({
 		lualine_b = { "branch", "diff", { "diagnostics", sources = { "nvim_diagnostic", "ale" } } },
 		lualine_c = { "filename" },
 		lualine_x = { "encoding", "fileformat", "filetype" },
-		lualine_y = { "progress" },
+		lualine_y = { "progress", autofm },
 		lualine_z = { "location" },
 	},
 	inactive_sections = {

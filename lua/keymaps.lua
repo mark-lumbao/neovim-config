@@ -22,6 +22,15 @@ map("n", "k", "kzz", { noremap = true, silent = true })
 map("n", "<leader>e", ":NvimTreeToggle<cr>", { noremap = true, silent = true })
 map("n", "<leader>E", ":NvimTreeFindFile<cr>", { noremap = true, silent = true })
 
+-- Toggle Format on-save
+-- 1 = on, 0 = off
+map("n", "<leader>an", function()
+	vim.fn.setenv("AUTO_FMT", 0)
+end, { noremap = true, silent = true })
+map("n", "<leader>ay", function()
+	vim.fn.setenv("AUTO_FMT", 1)
+end, { noremap = true, silent = true })
+
 -- Bubble single line
 map("n", "<C-Up>", ":m .-2<CR>", { noremap = true, silent = true })
 map("n", "<C-Down>", ":m .+1<CR>", { noremap = true, silent = true })
