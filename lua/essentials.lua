@@ -2,6 +2,7 @@ local vim = vim or {}
 
 local set = vim.o
 local setl = vim.opt_local
+local setenv = vim.fn.setenv
 local let = vim.g
 local cmd = vim.cmd
 
@@ -10,19 +11,6 @@ cmd([[
   colorscheme gruvbox
   filetype plugin indent on
 ]])
-
---[[
- Autofix with Eslint using nvm-lsp is faster
- rather than using NullLs
- https://github.com/neovim/nvim-lspconfig/blob/master/doc/server_configurations.md#eslint
- Below replaces autocmd BufWritePre *.tsx,*.ts,*.jsx,*.js EslintFixAll
-]]
-vim.api.nvim_create_autocmd({ "BufWritePre" }, {
-	pattern = { "*.tsx", "*.ts", "*.jsx", "*.js" },
-	callback = function()
-		vim.cmd("EslintFixAll")
-	end,
-})
 
 -- bypass default settings for markdowns only for the current buffer
 vim.api.nvim_create_autocmd({ "BufEnter" }, {
@@ -54,3 +42,4 @@ set.termguicolors = true
 set.autoindent = true
 set.undofile = true
 set.wrap = false
+setenv("AUTO_FMT", 1)
