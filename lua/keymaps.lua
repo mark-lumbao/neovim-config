@@ -93,7 +93,7 @@ map("n", "<S-Tab>", ":tabp<cr>", { noremap = true, silent = true })
 -- Tab Open/Close
 map("n", "nt", ":tabnew<cr>", { noremap = true, silent = true })
 map("n", "yt", ":tab split <cr>", { noremap = true, silent = true })
-map("n", "<BS>", ":tabc<cr>", { noremap = true, silent = true })
+map("n", "<leader><BS>", ":tabc<cr>", { noremap = true, silent = true })
 
 -- Window Navigation
 map("n", "<leader>H", ":wincmd H<CR>", { silent = true })
@@ -104,11 +104,13 @@ map("n", "<leader>h", ":wincmd h<CR>", { silent = true })
 map("n", "<leader>l", ":wincmd l<CR>", { silent = true })
 map("n", "<leader>k", ":wincmd k<CR>", { silent = true })
 map("n", "<leader>j", ":wincmd j<CR>", { silent = true })
+
+-- Window Open/Close
 map("n", "<leader>s", ":wincmd s<CR>", { silent = true })
 map("n", "<leader>v", ":wincmd v<CR>", { silent = true })
 map("n", "<leader>o", ":on <CR>", { silent = true })
 map("n", "<leader><leader>", ":wincmd c<CR>", { silent = true })
 
 -- Terminal Mode
-map("n", "<leader>te", ":te <cr> | i", { noremap = true })
-map("n", "<leader>tt", ":tabnew | te <cr> | i", { noremap = true })
+map("n", "<leader>~", ":tabnew | te <cr> | i", { noremap = true })
+map("n", "<leader>g~", ":te <cr> | i", { noremap = true })
