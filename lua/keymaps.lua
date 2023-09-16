@@ -39,71 +39,45 @@ map("n", "<C-Down>", ":m .+1<CR>", { noremap = true, silent = true })
 map("v", "<C-Up>", "xkP`[V`]", { noremap = true, silent = true })
 map("v", "<C-Down>", "xp`[V`]", { noremap = true, silent = true })
 
--- Git
-map("n", "<leader>gs", ":Git status<cr>", {})
-map("n", "<leader>gd", ":Git diff<cr>", {})
-map("n", "<leader>gv", ":GV!<cr>", {})
-map("n", "<leader>gV", ":GV<cr>", {})
-
--- Splits Resize
-map("n", "<leader><right>", ":vertical resize +10<cr>", { silent = true })
-map("n", "<leader><left>", ":vertical resize -10<cr>", { silent = true })
-map("n", "<leader><up>", ":resize -10<cr>", { silent = true })
-map("n", "<leader><down>", ":resize +10<cr>", { silent = true })
-
 -- Telescope Remaps
 map("n", "<leader>ff", function()
 	telescope.find_files()
 end, {})
-map("n", "<leader>fq", function()
-	telescope.quickfix()
-end, {})
-map("n", "<leader>fQ", function()
-	telescope.quickfixhistory()
+map("n", "<leader>fd", function()
+	telescope.diagnostics()
 end, {})
 map("n", "<leader>fg", function()
 	telescope.git_files()
 end, {})
-map("n", "<leader>fG", function()
-	telescope.git_branches()
-end, {})
 map("n", "<leader>fb", function()
-	telescope.buffers()
+	telescope.git_branches()
 end, {})
 map("n", "<leader>fk", function()
 	telescope.keymaps()
 end, {})
-map("n", "<leader>rg", function()
+map("n", "<leader>fr", function()
 	telescope.live_grep()
 end, {})
 
 -- Tab Navigation
-map("n", "<leader>1", ":tabn 1<cr>", { noremap = true, silent = true })
-map("n", "<leader>2", ":tabn 2<cr>", { noremap = true, silent = true })
-map("n", "<leader>3", ":tabn 3<cr>", { noremap = true, silent = true })
-map("n", "<leader>4", ":tabn 4<cr>", { noremap = true, silent = true })
-map("n", "<leader>5", ":tabn 5<cr>", { noremap = true, silent = true })
-map("n", "<leader>6", ":tabn 6<cr>", { noremap = true, silent = true })
-map("n", "<leader>7", ":tabn 7<cr>", { noremap = true, silent = true })
-map("n", "<leader>8", ":tabn 8<cr>", { noremap = true, silent = true })
-map("n", "<leader>9", ":tabn 9<cr>", { noremap = true, silent = true })
-map("n", "<Tab>", ":tabn<cr>", { noremap = true, silent = true })
-map("n", "<S-Tab>", ":tabp<cr>", { noremap = true, silent = true })
+for tc = 1, 9 do
+	map("n", "<leader>" .. tc, ":tabn " .. tc .. "<cr>", { noremap = true, silent = true })
+end
+map("n", "tj", ":tabp<cr>", { noremap = true, silent = true })
+map("n", "tk", ":tabn<cr>", { noremap = true, silent = true })
 
 -- Tab Open/Close
-map("n", "nt", ":tabnew<cr>", { noremap = true, silent = true })
-map("n", "yt", ":tab split <cr>", { noremap = true, silent = true })
-map("n", "<leader><BS>", ":tabc<cr>", { noremap = true, silent = true })
+map("n", "tn", ":tabnew<cr>", { noremap = true, silent = true })
+map("n", "tc", ":tabc<cr>", { noremap = true, silent = true })
+map("n", "ty", ":tab split <cr>", { noremap = true, silent = true })
+map("n", "tmj", ":tabm- <cr>", { noremap = true, silent = true })
+map("n", "tmk", ":tabm+ <cr>", { noremap = true, silent = true })
 
 -- Window Navigation
-map("n", "<leader>H", ":wincmd H<CR>", { silent = true })
-map("n", "<leader>L", ":wincmd L<CR>", { silent = true })
-map("n", "<leader>K", ":wincmd K<CR>", { silent = true })
-map("n", "<leader>J", ":wincmd J<CR>", { silent = true })
-map("n", "<leader>h", ":wincmd h<CR>", { silent = true })
-map("n", "<leader>l", ":wincmd l<CR>", { silent = true })
-map("n", "<leader>k", ":wincmd k<CR>", { silent = true })
-map("n", "<leader>j", ":wincmd j<CR>", { silent = true })
+for _, v in pairs({ "h", "j", "k", "l" }) do
+	map("n", "<leader>" .. v, ":wincmd " .. v .. "<CR>", { silent = true })
+	map("n", "<leader>" .. string.upper(v), ":wincmd " .. string.upper(v) .. "<CR>", { silent = true })
+end
 
 -- Window Open/Close
 map("n", "<leader>s", ":wincmd s<CR>", { silent = true })
@@ -111,6 +85,12 @@ map("n", "<leader>v", ":wincmd v<CR>", { silent = true })
 map("n", "<leader>o", ":on <CR>", { silent = true })
 map("n", "<leader><leader>", ":wincmd c<CR>", { silent = true })
 
+-- Window Resize
+map("n", "<leader><right>", ":vertical resize +10<cr>", { silent = true })
+map("n", "<leader><left>", ":vertical resize -10<cr>", { silent = true })
+map("n", "<leader><up>", ":resize -10<cr>", { silent = true })
+map("n", "<leader><down>", ":resize +10<cr>", { silent = true })
+
 -- Terminal Mode
 map("n", "<leader>~", ":tabnew | te <cr> | i", { noremap = true })
-map("n", "<leader>g~", ":te <cr> | i", { noremap = true })
+map("n", "<leader>g~", ":vs | te <cr> | i", { noremap = true })
