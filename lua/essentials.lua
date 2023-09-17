@@ -24,7 +24,7 @@ vim.api.nvim_create_autocmd({ "BufEnter" }, {
 let.mapleader = " "
 set.autoindent = true
 set.backup = false
-set.clipboard = vim.o.clipboard .. "unnamedplus"
+set.clipboard = "unnamedplus"
 set.cp = false
 set.encoding = "utf-8"
 set.errorbells = false
