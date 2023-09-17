@@ -8,13 +8,11 @@
 -- ----------------------------------------------------------
 
 require("comment")
-require("dashboard")
 require("essentials")
-require("plugins")
+require("gsigns")
 require("keymaps")
 require("lline")
 require("lsp")
-require("ntree")
 require("null_ls")
+require("plugins")
 require("tree-sitter")
-require("gsigns")

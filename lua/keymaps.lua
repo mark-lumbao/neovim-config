@@ -18,9 +18,8 @@ end, { noremap = true, silent = true })
 map("n", "j", "jzz", { noremap = true, silent = true })
 map("n", "k", "kzz", { noremap = true, silent = true })
 
--- Toggle NerdTree
-map("n", "<leader>e", ":NvimTreeToggle<cr>", { noremap = true, silent = true })
-map("n", "<leader>E", ":NvimTreeFindFile<cr>", { noremap = true, silent = true })
+-- Toggle Netrw
+map("n", "<leader>e", ":Lex<cr>", { noremap = true, silent = true })
 
 -- Toggle Format on-save
 -- 1 = on, 0 = off
@@ -63,8 +62,6 @@ end, {})
 for tc = 1, 9 do
 	map("n", "<leader>" .. tc, ":tabn " .. tc .. "<cr>", { noremap = true, silent = true })
 end
-map("n", "tj", ":tabp<cr>", { noremap = true, silent = true })
-map("n", "tk", ":tabn<cr>", { noremap = true, silent = true })
 
 -- Tab Open/Close
 map("n", "tn", ":tabnew<cr>", { noremap = true, silent = true })

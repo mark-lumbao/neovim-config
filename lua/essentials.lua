@@ -8,7 +8,7 @@ local cmd = vim.cmd
 
 cmd([[
   syntax on
-  colorscheme gruvbox
+  colorscheme habamax
   filetype plugin indent on
 ]])
 
@@ -22,9 +22,20 @@ vim.api.nvim_create_autocmd({ "BufEnter" }, {
 	end,
 })
 
+-- Netrw settings
+-- Reference :h netrw-browser-settings
+cmd([[
+set updatetime=100
+let g:netrw_liststyle=3
+let g:netrw_banner=0
+autocmd CursorHold * if (&filetype == 'netrw' && &number == 0) | set nu rnu | endif
+]])
+
+set.path = vim.o.path .. "src/**"
+
 let.mapleader = " "
 set.backup = false
-set.clipboard = "unnamedplus"
+set.clipboard = vim.o.clipboard .. "unnamedplus"
 set.cp = false
 set.encoding = "utf-8"
 set.errorbells = false
