@@ -9,7 +9,6 @@ local cmd = vim.cmd
 cmd([[
   syntax on
   colorscheme habamax
-  filetype plugin indent on
 ]])
 
 -- bypass default settings for markdowns only for the current buffer
@@ -22,18 +21,8 @@ vim.api.nvim_create_autocmd({ "BufEnter" }, {
 	end,
 })
 
--- Netrw settings
--- Reference :h netrw-browser-settings
-cmd([[
-set updatetime=100
-let g:netrw_liststyle=3
-let g:netrw_banner=0
-autocmd CursorHold * if (&filetype == 'netrw' && &number == 0) | set nu rnu | endif
-]])
-
-set.path = vim.o.path .. "src/**"
-
 let.mapleader = " "
+set.autoindent = true
 set.backup = false
 set.clipboard = vim.o.clipboard .. "unnamedplus"
 set.cp = false
@@ -42,6 +31,7 @@ set.errorbells = false
 set.expandtab = true
 set.incsearch = true
 set.nu = true
+set.path = vim.o.path .. "src/**"
 set.rnu = true
 set.shiftwidth = 2
 set.smartcase = true
@@ -50,7 +40,6 @@ set.softtabstop = 2
 set.swapfile = false
 set.tabstop = 2
 set.termguicolors = true
-set.autoindent = true
 set.undofile = true
 set.wrap = false
 setenv("AUTO_FMT", 1)
