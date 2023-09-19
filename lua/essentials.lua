@@ -8,7 +8,7 @@ local cmd = vim.cmd
 
 cmd([[
   syntax on
-  colorscheme habamax
+  colorscheme retrobox
 ]])
 
 -- bypass default settings for markdowns only for the current buffer

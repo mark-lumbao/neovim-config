@@ -23,8 +23,7 @@
 
 - Native Neovim LSP with completion and diagnosis
 - null-ls for code-formatting and linting
-- nvim-tree file explorer
 - Git commands
 - Telescope
-- Gruvbox colorscheme
+- Retrobox colorscheme I borrowed from vim's default colorschemes
 - Treesitter for syntax highlights and indents
