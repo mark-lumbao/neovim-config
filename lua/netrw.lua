@@ -5,9 +5,8 @@ vim.cmd([[
 
   set updatetime=100
 
-  let g:netrw_browse_split = 3
   let g:netrw_banner=0
-  let g:netrw_keepdir = 0
+  let g:netrw_keepdir=0
 
   autocmd CursorHold * if (&filetype == 'netrw' && &number == 0) | set nu rnu | endif
 ]])

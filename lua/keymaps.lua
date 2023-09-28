@@ -1,18 +1,9 @@
--- TODO: Convert all string :call to lua function calls
-
 local vim = vim or {}
 local map = vim.keymap.set
 local telescope = require("telescope.builtin")
 
 -- Clear search highlights
 map("n", "<Escape>", ":noh<cr>", { noremap = true, silent = true })
-
--- Open Quickfix List
-map("n", "<c-q>", ":copen<cr>", { noremap = true, silent = true })
-map("n", "<c-l>", ":lopen<cr>", { noremap = true, silent = true })
-map("n", "<leader>cq", function()
-	vim.fn.setqflist({})
-end, { noremap = true, silent = true })
 
 -- Center cursor on navigation
 map("n", "j", "jzz", { noremap = true, silent = true })
