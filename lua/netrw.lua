@@ -1,8 +1,6 @@
-cmd = vim.cmd
-
 -- Netrw settings
 -- Reference :h netrw-browser-settings
-cmd([[
+vim.cmd([[
   filetype plugin indent on
 
   set updatetime=100
