@@ -17,7 +17,7 @@
 
 > Mark Anthony Lumbao
 
-### Plugin Manager: packer
+### Plugin Manager: lazy.nvim
 
 ### Feature List
 

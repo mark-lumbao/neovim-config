@@ -7,6 +7,7 @@
 -- -                                                |___/   -
 -- ----------------------------------------------------------
 
+require("lazy-init") -- lazy plugin management init
 require("comment")
 require("essentials")
 require("gsigns")
@@ -15,5 +16,4 @@ require("lline")
 require("lsp")
 require("netrw")
 require("null_ls")
-require("plugins")
 require("tree-sitter")
