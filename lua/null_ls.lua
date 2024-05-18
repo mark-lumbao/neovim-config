@@ -20,6 +20,7 @@ local sources = {
 			return utils.root_has_file({ ".github/actionlint.yaml" })
 		end,
 	}),
+	diagnostics.cppcheck,
 	diagnostics.flake8,
 	diagnostics.luacheck,
 	diagnostics.jsonlint,
@@ -29,6 +30,7 @@ local sources = {
 			return utils.root_has_file(eslintReqTable)
 		end,
 	}),
+	formatting.astyle,
 	formatting.brittany,
 	formatting.black,
 	formatting.elm_format,

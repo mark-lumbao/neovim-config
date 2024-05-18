@@ -15,6 +15,7 @@ require("nvim-treesitter.configs").setup({
 		"javascript",
 		"json",
 		"lua",
+		"markdown",
 		"python",
 		"regex",
 		"rust",
@@ -25,6 +26,10 @@ require("nvim-treesitter.configs").setup({
 		"vim",
 		"yaml",
 	},
+	ignore_install = {},
+	sync_install = false,
+	auto_install = false,
+	modules = {},
 	indent = {
 		enable = true,
 	},
